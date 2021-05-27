@@ -6,30 +6,31 @@ namespace EmpWageProblems
 {
     class EmpWageProblem
     {
-        readonly int Wage_Per_Hours = 20;
-        readonly int Emp_Full_Time = 2;
-        readonly int Emp_Part_Time = 1;
-        int empHrs;
-        int EmployeeWage;
-        public void Attendance()
+        const int Emp_Full_Time = 1;
+        const int Emp_Part_Time = 2;
+        public int Wage_Per_Hours = 20;
+        public int empHrs = 0;
+
+        public void Attendence()
         {
             Random random = new Random();
-            int empCheck = random.Next(0, 2);
-            // if (empCheck == IS_PRESENT)
-            //{
-            //  Console.WriteLine("Employee is Present");
-            if (empCheck == Emp_Part_Time)
+            int empCheck = random.Next(0, 3);
+            switch (empCheck)
             {
-                Console.WriteLine("Employee is Present");
-                empHrs = 4;
+                case Emp_Full_Time:
+                    empHrs = 8;
+                    break;
+
+                case Emp_Part_Time:
+                    empHrs = 4;
+                    break;
+
+                default:
+                    empHrs = 0;
+                    break;
             }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
-                empHrs = 0;
-            }
-            EmployeeWage = empHrs * Wage_Per_Hours;
-            Console.WriteLine("Employee Full Wage is : " + EmployeeWage);
+            int EmployeeWage = empHrs * Wage_Per_Hours;
+            Console.WriteLine(EmployeeWage);
 
 
         }
