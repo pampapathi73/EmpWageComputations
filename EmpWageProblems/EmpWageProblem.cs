@@ -11,7 +11,7 @@ namespace EmpWageProblems
         public int Wage_Per_Hours = 20;
         public int empHrs = 0;
         public int Working_Days_Per_Month = 20;
-        public int Total_Salary_Month = 100;
+        public int Total_Salary_Month = 0;
         public int Total_Working_Hours = 100;
         public int Working_Days = 0;
 
