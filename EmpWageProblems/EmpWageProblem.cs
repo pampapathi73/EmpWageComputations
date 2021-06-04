@@ -11,11 +11,14 @@ namespace EmpWageProblems
         public int Wage_Per_Hours = 20;
         public int empHrs = 0;
         public int Working_Days_Per_Month = 20;
-        public int Total_Salary_Month = 100;
+        public int Total_Salary_Month = 0;
         public int Total_Working_Hours = 100;
         public int Working_Days = 0;
 
-        public void Attendence()
+        public int EmployeeWage = 0;
+        public int EmpSalary;
+
+        public int Attendence()
         {
             while (empHrs < Total_Working_Hours && Working_Days < Working_Days_Per_Month)
             {
@@ -41,10 +44,11 @@ namespace EmpWageProblems
             }
             int EmpSalary = Total_Working_Hours + Wage_Per_Hours;
             Console.WriteLine(EmpSalary);
+            return EmpSalary;
+
+
 
 
         }
-        }
-    }
-
+    }  } 
 
