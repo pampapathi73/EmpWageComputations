@@ -18,8 +18,9 @@ namespace EmpWageProblems
         public int EmployeeWage = 0;
         public int EmpSalary;
 
-        public int Attendence()
+        public int Attendence(string company,int empRateHour,int numOfWorkingDays,int maxHoursPerMonth)
         {
+            int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
             while (empHrs < Total_Working_Hours && Working_Days < Working_Days_Per_Month)
             {
                 Working_Days++;
@@ -45,10 +46,6 @@ namespace EmpWageProblems
             int EmpSalary = Total_Working_Hours + Wage_Per_Hours;
             Console.WriteLine(EmpSalary);
             return EmpSalary;
-
-
-
-
         }
     }  } 
 
