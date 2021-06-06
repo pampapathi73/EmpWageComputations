@@ -6,12 +6,10 @@ namespace EmpWageProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Employee Wage Program"); //main
-            EmpWageProblem EmployeeWage = new EmpWageProblem();
-            EmployeeWage.Attendence();
-            Attendence("DMart", 20, 2, 100);
-            Attendence("Reliance", 10, 4, 20);
-            Console.ReadKey();
+            EmpWageBuilderArray empWageBuilderArray = new EmpWageBuilderArray();
+            empWageBuilderArray.addCompanyEmpWage("Dmart", 20, 2, 10);
+            empWageBuilderArray.addCompanyEmpWage("reliance", 10, 4, 20);
+            empWageBuilderArray.computeEmpWage();
         }
     }
 }
